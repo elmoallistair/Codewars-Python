@@ -1,6 +1,4 @@
 # Sort the Odd
-
-# Instructions
 You have an array of numbers.
 
 Your task is to sort ascending odd numbers but even numbers must be on their places.
@@ -17,4 +15,11 @@ sort_array([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
 def sort_array(source_array):
     odd_arr = sorted([num for num in source_array if num%2 != 0])
     return [num if num%2 == 0 else odd_arr.pop(0) for num in source_array]
+```
+
+## Sample Test
+```
+Test.assert_equals(sort_array([5, 3, 2, 8, 1, 4]), [1, 3, 2, 8, 5, 4])
+Test.assert_equals(sort_array([5, 3, 1, 8, 0]), [1, 3, 5, 8, 0])
+Test.assert_equals(sort_array([]),[])
 ```

@@ -1,6 +1,4 @@
 # Simple Pig Latin
-
-## Instructions
 Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 
 Examples
@@ -24,4 +22,10 @@ def pig_it(text):
 ```
 def pig_it(text):
     return " ".join(x[1:] + x[0] + "ay" if x.isalnum() else x for x in text.split())
+```
+
+## Sample Test
+```
+Test.assert_equals(pig_it('Pig latin is cool'),'igPay atinlay siay oolcay')
+Test.assert_equals(pig_it('This is my string'),'hisTay siay ymay tringsay')
 ```

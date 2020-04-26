@@ -1,6 +1,4 @@
-# Train: Square Every Digit
-
-## Instruction
+# Square Every Digit
 Welcome. In this kata, you are asked to square every digit of a number.
 
 For example, if we run 9119 through the function, 811181 will come out, because 9<sup>2</sup> is 81 and 1<sup>2</sup> is 1.
@@ -18,4 +16,9 @@ def square_digits(num):
 ```
 def square_digits(num):
     return int(''.join([str(int(i)**2) for i in str(num)]))
+```
+
+## Sample Test
+```
+test.assert_equals(square_digits(9119), 811181)
 ```

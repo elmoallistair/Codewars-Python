@@ -1,6 +1,4 @@
 # Build Tower
-
-## Instructions
 Build Tower by the following given argument:
 number of floors (integer and always greater than 0).
 
@@ -43,4 +41,13 @@ def tower_builder(n_floors):
 ```
 def tower_builder(n_floors):
     return [(' '*(n_floors-n-1) + '*'*(n*2+1) + ' '*(n_floors-n-1)) for n in range(n_floors)]
+```
+
+## Sample Test
+```
+test.describe("Tests")
+test.it("Basic Tests")
+test.assert_equals(tower_builder(1), ['*', ])
+test.assert_equals(tower_builder(2), [' * ', '***'])
+test.assert_equals(tower_builder(3), ['  *  ', ' *** ', '*****'])
 ```

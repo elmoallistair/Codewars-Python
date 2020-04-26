@@ -1,6 +1,4 @@
 # Number of trailing zeros of N!
-
-## Instructions
 Write a program that will calculate the number of trailing zeros in a factorial of a given number.
 ```
 N! = 1 * 2 * 3 * ... * N
@@ -30,4 +28,13 @@ def zeros(n):
         pow *= 5
 
     return int(count)
+```
+
+## Sample Test
+```
+test.describe("Sample Tests")
+test.it("Should pass sample tests")
+test.assert_equals(zeros(0), 0, "Testing with n = 0")
+test.assert_equals(zeros(6), 1, "Testing with n = 6")
+test.assert_equals(zeros(30), 7, "Testing with n = 30")
 ```

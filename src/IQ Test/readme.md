@@ -23,9 +23,14 @@ def iq_test(numbers):
     else:
         return lst.index('even')+1
 ```
-
 ```
 def iq_test(numbers):
     lst = [int(i)%2==0 for i in numbers.split()]
     return lst.index(False if lst.count(True)>lst.count(False) else True)+1
+```
+
+## Sample Test
+```
+Test.assert_equals(iq_test("2 4 7 8 10"),3)
+Test.assert_equals(iq_test("1 2 2"), 1)
 ```
